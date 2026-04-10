@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+<h2>Appointments</h2>
+<table border="1" id="table">
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Service</th>
+        <th>Date</th>
+        <th>Time</th>
+    </tr>
+</table>
+
+<script>
+async function loadAppointments() {
+    const res = await fetch("/api/appointments");
+    const data = await res.json();
+
+    const table = document.getElementById("table");
+
+    data.appointments.forEach(a => {
+        const row = `
+            <tr>
+                <td>${a.name}</td>
+                <td>${a.phone}</td>
+                <td>${a.service}</td>
+                <td>${a.date}</td>
+                <td>${a.time}</td>
+            </tr>
+        `;
+        table.innerHTML += row;
+    });
+}
+
+loadAppointments();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "69d7405a-p924g",
+    "name": "Test Patient",
+    "phone": "9876543210",
+    "email": "",
+    "service": "General Check-up & Cleaning",
+    "date": "2026-12-04",
+    "time": "Not specified",
+    "message": "",
+    "status": "pending",
+    "submittedAt": "2026-04-09T05:59:54.521Z"
+  },
+  {
+    "id": "69d7584b-c26p9",
+    "name": "DOLI",
+    "phone": "7337291657",
+    "email": "nijamaladivya@gmail.com",
+    "service": "Other",
+    "date": "2026-04-09",
+    "time": "10:00 AM - 11:00 AM",
+    "message": "",
+    "status": "pending",
+    "submittedAt": "2026-04-09T07:42:02.998Z"
+  }
+]

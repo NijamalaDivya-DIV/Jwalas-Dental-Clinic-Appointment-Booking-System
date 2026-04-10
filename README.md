@@ -7,11 +7,6 @@ Web-based appointment booking system for Jwalas Dental Clinic. Built with Python
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Contributions](https://img.shields.io/badge/contributions-welcome-orange)
 
----
-
-## 🌐 Live Demo
-
-🔗 [https://github.com/NijamalaDivya-DIV/Jwalas-Dental-Clinic-Appointment-Booking-System.git]
 
 ---
 
@@ -95,7 +90,7 @@ http://localhost:8080
 ## 🔗 Example Tracking URL
 
 ```
-https://yourclinic.onrender.com/?utm_source=google&utm_medium=gmb&utm_campaign=clinic
+https://github.com/NijamalaDivya-DIV/Jwalas-Dental-Clinic-Appointment-Booking-System.gi
 ```
 
 ---

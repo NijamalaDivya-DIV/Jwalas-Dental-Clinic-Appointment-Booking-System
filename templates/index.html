@@ -2,12 +2,21 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJNTYVYSJX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HJNTYVYSJX');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Jwalas Dental Clinic, Jubilee Hills, Hyderabad — Trusted family dentistry since 1992. Advanced dental care with a gentle touch. 5.0★ Google Rating.">
   <title>Jwalas Dental Clinic · Jubilee Hills, Hyderabad — Since 1992</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
 </head>
 
 <body>
@@ -462,7 +471,6 @@
       </div>
     </div>
   </section>
-
   <!-- ========== OUR FACILITY ========== -->
   <section class="facility" id="facility">
     <div class="container">
@@ -571,109 +579,117 @@
             <p>Dedicated sterilization lab following international infection control protocols. Every instrument is
               autoclaved and sealed before use, ensuring the highest standards of hygiene for your safety.</p>
           </div>
+          </div><section class="facility" id="facility">
+            <div class="container">
+              <div class="section-header animate-on-scroll">
+        <div class="section-label">Our Facility</div>
+        <h2 class="section-title">Modern, Clean & Designed for Your Comfort</h2>
+        <p class="section-desc">Step into our clinic and experience a calm, hygienic environment equipped with advanced
+          technology. Every room is designed to make your visit comfortable and efficient.</p>
+      </div>
+      <div class="facility-grid">
+        <div class="facility-card animate-on-scroll">
+          <div class="facility-image">
+            <img src="images/opg-xray-room.png" alt="OPG X-Ray Room at Jwalas Dental Clinic">
+            <div class="facility-overlay">
+              <div class="facility-overlay-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="facility-info">
+            <h3>OPG X-Ray Room</h3>
+            <p>Digital panoramic X-ray for comprehensive dental imaging with minimal radiation exposure.</p>
+          </div>
+        </div>
+
+        <div class="facility-card animate-on-scroll">
+          <div class="facility-image">
+            <img src="images/consultation-room.png" alt="Consultation Room at Jwalas Dental Clinic">
+            <div class="facility-overlay">
+              <div class="facility-overlay-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="facility-info">
+            <h3>Consultation Room</h3>
+            <p>Private consultation space where our doctors discuss your treatment plan in detail.</p>
+          </div>
+        </div>
+
+        <div class="facility-card animate-on-scroll">
+          <div class="facility-image">
+            <img src="images/treatment-room.png" alt="Treatment Room at Jwalas Dental Clinic">
+            <div class="facility-overlay">
+              <div class="facility-overlay-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="facility-info">
+            <h3>Treatment Room</h3>
+            <p>Fully equipped treatment rooms with modern dental chairs and sterilized instruments.</p>
+          </div>
+        </div>
+
+        <div class="facility-card animate-on-scroll">
+          <div class="facility-image">
+            <img src="images/consultation-room.png" alt="Second Consultation Room at Jwalas Dental Clinic">
+            <div class="facility-overlay">
+              <div class="facility-overlay-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="facility-info">
+            <h3>Consultation Room 2</h3>
+            <p>Additional private consultation space to ensure minimal wait times for our patients.</p>
+          </div>
+        </div>
+
+        <div class="facility-card facility-card-wide animate-on-scroll">
+          <div class="facility-image">
+            <img src="images/clinic-interior.png" alt="Lab & Sterilization Room at Jwalas Dental Clinic">
+            <div class="facility-overlay">
+              <div class="facility-overlay-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="facility-info">
+            <h3>Lab & Sterilization Room</h3>
+            <p>Dedicated sterilization lab following international infection control protocols. Every instrument is
+              autoclaved and sealed before use, ensuring the highest standards of hygiene for your safety.</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ========== WHY CHOOSE US ========== -->
-  <section class="why-us" id="why-us">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-label">Why Choose Us</div>
-        <h2 class="section-title">What Sets Us Apart</h2>
-        <p class="section-desc">We believe great dentistry is built on trust, honesty, and genuine care for every
-          patient.</p>
-      </div>
-      <div class="why-us-grid">
-        <div class="why-us-card animate-on-scroll">
-          <div class="why-us-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-          </div>
-          <h3>Honest Treatment Plans</h3>
-          <p>We only recommend treatments you truly need. No upselling, no unnecessary procedures — just transparent,
-            ethical care.</p>
-        </div>
-        <div class="why-us-card animate-on-scroll">
-          <div class="why-us-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-          </div>
-          <h3>Painless Procedures</h3>
-          <p>Modern anaesthesia techniques and a gentle approach ensure your visit is as pain-free and comfortable as
-            possible.</p>
-        </div>
-        <div class="why-us-card animate-on-scroll">
-          <div class="why-us-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-          </div>
-          <h3>30+ Years of Experience</h3>
-          <p>Serving Jubilee Hills since 1992, our clinic has built enduring relationships across generations of
-            families.</p>
-        </div>
-        <div class="why-us-card animate-on-scroll">
-          <div class="why-us-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-              <line x1="8" y1="21" x2="16" y2="21" />
-              <line x1="12" y1="17" x2="12" y2="21" />
-            </svg>
-          </div>
-          <h3>Advanced Technology</h3>
-          <p>Digital X-rays, OPG, rotary endodontics and modern sterilization — we invest in the best for your health.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== DOCTORS ========== -->
-  <section class="doctors" id="doctors">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-label">Our Team</div>
-        <h2 class="section-title">Meet Your Dentists</h2>
-        <p class="section-desc">Experienced, compassionate professionals dedicated to making every visit a positive
-          experience.</p>
-      </div>
-      <div class="doctors-grid">
-        <div class="doctor-card animate-on-scroll">
-          <div class="doctor-image">
-            <img src="images/doctor-anitha.png" alt="Dr. Anitha - Lead Dentist at Jwalas Dental Clinic">
-          </div>
-          <div class="doctor-info">
-            <h3 class="doctor-name">Dr. Anitha</h3>
-            <p class="doctor-title">BDS, MDS · Lead Dentist</p>
-            <p class="doctor-desc">Specializing in restorative and cosmetic dentistry with over 20 years of clinical
-              experience and a passion for patient comfort.</p>
-          </div>
-        </div>
-        <div class="doctor-card animate-on-scroll">
-          <div class="doctor-image">
-            <img src="images/doctor-hema.png" alt="Dr. Hema - Orthodontist at Jwalas Dental Clinic">
-          </div>
-          <div class="doctor-info">
-            <h3 class="doctor-name">Dr. Hema</h3>
-            <p class="doctor-title">BDS, MDS · Orthodontist</p>
-            <p class="doctor-desc">Expert in orthodontic treatments, clear aligners and pediatric dentistry, bringing a
-              gentle and caring approach to every patient.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  </section> 
   <!-- ========== REVIEWS ========== -->
   <section class="reviews" id="reviews">
     <div class="container">
@@ -849,13 +865,6 @@
       <div class="contact-layout">
         <!-- Appointment Form -->
         <div class="appointment-form-card animate-on-scroll">
-            <div id="success" style="display:none;color:green;">
-    Appointment booked successfully!
-</div>
-
-<form id="appointment-form">
-    <!-- your inputs here -->
-</form>
           <form id="appointment-form" novalidate>
             <div class="form-row">
               <div class="form-group">
@@ -966,8 +975,6 @@
             </div>
             <h4>Visit Us</h4>
             <p>Jubilee Hills, Hyderabad<br>Telangana, India</p>
-          </div>
-
           <div class="contact-sidebar-card">
             <div class="contact-sidebar-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1220,57 +1227,44 @@
     });
   </script>
 <script>
-    document.getElementById("success").style.display = "block";
-document.getElementById("appointment-form").addEventListener("submit", function(e) {
-    e.preventDefault(); // stop page reload
-
-    const btn = document.getElementById("submit-btn");
-    const text = document.getElementById("submit-text");
-    const spinner = document.getElementById("submit-spinner");
-
-    // show loading
-    text.innerText = "Booking...";
-    spinner.style.display = "inline-block";
-    btn.disabled = true;
+document.getElementById("appointment-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
     const data = {
         name: document.getElementById("patient-name").value,
         phone: document.getElementById("patient-phone").value,
-        email: document.getElementById("patient-email").value,
-        service: document.getElementById("patient-service").value,
-        date: document.getElementById("patient-date").value,
-        time: document.getElementById("patient-time").value,
-        message: document.getElementById("patient-message").value
+        email: document.getElementById("patient-email")?.value,
+        service: document.getElementById("service")?.value,
+        date: document.getElementById("appointment-date")?.value,
+        time: document.getElementById("appointment-time")?.value,
+        message: document.getElementById("message")?.value
     };
 
-    fetch("/api/appointments", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(res => {
-        alert("✅ Appointment Booked Successfully!");
+    try {
+        const response = await fetch("http://localhost:8080/api/appointments", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
 
-        // reset form
-        document.getElementById("appointment-form").reset();
+        const result = await response.json();
 
-        text.innerText = "Book Appointment";
-        spinner.style.display = "none";
-        btn.disabled = false;
-    })
-    .catch(err => {
-        alert("❌ Something went wrong!");
-        console.error(err);
+        if (response.ok) {
+            alert("✅ Appointment Booked Successfully!");
+            document.getElementById("appointment-form").reset();
+        } else {
+            alert("❌ " + result.error);
+        }
 
-        text.innerText = "Book Appointment";
-        spinner.style.display = "none";
-        btn.disabled = false;
-    });
+    } catch (error) {
+        alert("❌ Error connecting to server");
+        console.error(error);
+    }
 });
 </script>
 </body>
 
 </html>
+

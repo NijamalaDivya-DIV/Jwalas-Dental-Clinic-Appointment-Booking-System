@@ -5,9 +5,9 @@ import time
 import random
 import string
 from datetime import datetime
+
 app = Flask(__name__)
 
-# Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 FILE = os.path.join(DATA_DIR, "appointments.json")
@@ -58,4 +58,4 @@ def admin():
 # Run server
 if __name__ == "__main__":
     print("Server running → http://localhost:8080")
-    app.run(debug=True)
+    app.run(debug=True,port=8080)

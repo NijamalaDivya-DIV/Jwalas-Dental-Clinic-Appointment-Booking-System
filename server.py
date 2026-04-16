@@ -17,10 +17,12 @@ os.makedirs(DATA_DIR, exist_ok=True)
 # Load data
 def load():
     if os.path.exists(FILE):
-        with open(FILE, "r") as f:
-            return json.load(f)
+        try:
+            with open(FILE, "r") as f:
+                return json.load(f)
+        except:
+            return []
     return []
-
 # Save data
 def save(data):
     with open(FILE, "w") as f:
@@ -57,5 +59,6 @@ def admin():
 
 # Run server
 if __name__ == "__main__":
-    print("Server running → http://localhost:8080")
-    app.run(debug=True,port=8080)
+    print("Server running...")
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)

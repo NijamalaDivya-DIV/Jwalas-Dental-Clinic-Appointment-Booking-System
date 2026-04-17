@@ -1,19 +1,37 @@
 import sqlite3
+from twilio.rest import Client
 from flask import Flask, render_template, request, redirect, url_for
 import smtplib
 from email.mime.text import MIMEText
 
 app = Flask(__name__)
 
+# 🔹 TWILIO CLIENT
+twilio_client = Client("your_account_sid", "your_auth_token")
+
+# 🔹 SMS FUNCTION
+def send_sms(name, phone, date):
+    try:
+        message = twilio_client.messages.create(
+            body=f"New Appointment:\nName: {name}\nDate: {date}",
+            from_="+1234567890",   # your Twilio number
+            to="+91" + phone
+        )
+        print("✅ SMS sent:", message.sid)
+    except Exception as e:
+        print("❌ SMS Error:", e)
+
+
 # 🔹 EMAIL FUNCTION
 def send_email(name, phone, date):
-    sender_email = "yourgmail@gmail.com"
-    sender_password = "your_app_password"
+    try:
+        sender_email = "yourgmail@gmail.com"
+        sender_password = "your_app_password"
 
-    receiver_email = "yourgmail@gmail.com"
+        receiver_email = "yourgmail@gmail.com"
 
-    subject = "New Dental Appointment"
-    body = f"""
+        subject = "New Dental Appointment"
+        body = f"""
 New appointment booked:
 
 Name: {name}
@@ -21,16 +39,21 @@ Phone: {phone}
 Date: {date}
 """
 
-    msg = MIMEText(body)
-    msg['Subject'] = subject
-    msg['From'] = sender_email
-    msg['To'] = receiver_email
+        msg = MIMEText(body)
+        msg['Subject'] = subject
+        msg['From'] = sender_email
+        msg['To'] = receiver_email
 
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.starttls()
-    server.login(sender_email, sender_password)
-    server.send_message(msg)
-    server.quit()
+        server = smtplib.SMTP('smtp.gmail.com', 587, timeout=10)
+        server.starttls()
+        server.login(sender_email, sender_password)
+        server.send_message(msg)
+        server.quit()
+
+        print("✅ Email sent")
+
+    except Exception as e:
+        print("❌ Email Error:", e)
 
 
 # 🔹 HOME PAGE
@@ -39,7 +62,7 @@ def home():
     return render_template('index.html')
 
 
-# 🔹 BOOKING ROUTE (IMPORTANT - YOU MISSED THIS)
+# 🔹 BOOKING
 @app.route('/booking', methods=['GET', 'POST'])
 def booking():
     if request.method == 'POST':
@@ -58,15 +81,18 @@ def booking():
         conn.commit()
         conn.close()
 
-        # 📧 SEND EMAIL
+        # 📧 EMAIL
         send_email(name, phone, date)
+
+        # 📱 SMS
+        send_sms(name, phone, date)
 
         return render_template('success.html', name=name)
 
     return render_template('booking.html')
 
 
-# 🔹 VIEW APPOINTMENTS
+# 🔹 VIEW
 @app.route('/appointments')
 def appointments():
     conn = sqlite3.connect('database.db')
@@ -119,6 +145,6 @@ def edit(id):
     return render_template('edit.html', data=data)
 
 
-# 🔹 RUN APP
+# 🔹 RUN
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)    

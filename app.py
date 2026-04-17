@@ -7,7 +7,12 @@ from email.mime.text import MIMEText
 app = Flask(__name__)
 
 # 🔹 TWILIO CLIENT
-twilio_client = Client("your_account_sid", "your_auth_token")
+try:
+    from twilio.rest import Client
+    twilio_client = Client("your_sid", "your_token")
+except:
+    print("Twilio not installed")
+    twilio_client = None
 
 # 🔹 SMS FUNCTION
 def send_sms(name, phone, date):
